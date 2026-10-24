@@ -1,0 +1,72 @@
+
+> cloud-castle@1.0.0 test
+> npm run build && node --test tests/unit/*.test.js tests/browser/*.test.js
+
+
+> cloud-castle@1.0.0 build
+> vite build
+
+vite v8.3.5 building client environment for production...
+transforming...
+✓ 44 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   1.89 kB │ gzip:   0.99 kB
+dist/assets/index-CPPDI2lR.css    4.03 kB │ gzip:   1.61 kB
+dist/assets/index-ERaked-8.js   695.67 kB │ gzip: 203.35 kB
+
+✓ built in 96ms
+✔ 云上城堡：真实 Chrome 端到端验收 (11935.52175ms)
+ℹ draw calls ≤ 46, 三角形 ≤ 20212, FPS 中位 60.0, 塔 8 座, 顶点 21974
+✔ prng：同 seed 产生完全相同的序列 (1.234334ms)
+✔ prng：输出落在 [0,1) 且状态互不干扰 (0.589167ms)
+✔ 模型：同一 seed 两次生成结果 deepEqual (0.218834ms)
+✔ 模型：连续三次同 seed 仍然 deepEqual（不存在 Math.random 差异） (0.128833ms)
+✔ 模型：不同 seed 至少有一个可变字段不同 (0.066666ms)
+✔ 模型：seed = 0 与 seed = 4294967295 都是合法种子 (0.227417ms)
+✔ 模型：恰好 8 座塔，字段合法且全部为正有限数 (0.10675ms)
+✔ 模型：塔的站位固定为四角 + 正门两侧 + 两侧墙中段 (0.063083ms)
+✔ 模型：城墙分段 axis 合法且尺寸为正 (0.066416ms)
+✔ 模型：details 是数量而非数组 (0.078667ms)
+✔ 模型：自带模型能通过校验 (0.141ms)
+✔ 摘要：towerCount 与 towerHeights 符合契约 (0.204042ms)
+✔ 摘要：geometryVertexCount 原样透传 (0.065209ms)
+✔ 校验：缺字段抛 TypeError (0.298416ms)
+✔ 校验：NaN / Infinity 抛 TypeError (0.150333ms)
+✔ 校验：0 长度 / 0 高度抛 TypeError (0.1995ms)
+✔ 校验：非法 sides / style / axis 抛 TypeError (0.142958ms)
+✔ 校验：错误消息里指明出错的字段 (0.122542ms)
+✔ 配置：空串返回全默认值 (1.29475ms)
+✔ 配置：默认种子与预设常量 (0.067209ms)
+✔ 配置：完整查询串正常解析 (0.116417ms)
+✔ 配置：合法 seed 被接受 (0.068041ms)
+✔ 配置：非法 seed 回退默认种子 (0.080458ms)
+✔ 配置：seed = 0 是合法种子 (0.036083ms)
+✔ 配置：seed 上界 4294967295 合法，4294967296 回退 (0.038917ms)
+✔ 配置：quality 合法值被接受 (0.045083ms)
+✔ 配置：非法 quality 回退 high 且大小写敏感 (0.046041ms)
+✔ 配置：still 与 debug 的布尔取值 (0.487459ms)
+✔ 配置：不带 ? 前缀的裸查询串也能解析 (0.12ms)
+✔ 配置：重复参数取第一个 (0.067958ms)
+✔ 配置：解析是纯函数，重复调用结果一致 (0.052708ms)
+✔ makeTowerBody 侧面绕序：三角形外法线与径向期望点积 > 0 (1.382209ms)
+✔ makeTowerBody 顶盖法线朝 +Y、底盖法线朝 -Y (0.760541ms)
+✔ makeMatchingRoof 底边边数与塔身一致，且底边半径等于塔身顶半径 (0.471ms)
+✔ makeRingPlatform 内外环顶点数相同且环面有实际面积 (0.154625ms)
+✔ mergeTransformed 把部件放到各自位置，不堆在原点 (0.915166ms)
+✔ mergeTransformed 属性结构不兼容时抛错而不是返回 null (0.286042ms)
+✔ 所有生成的几何体 position/normal 均无 NaN 与 Infinity (2.675208ms)
+✔ countGeometryVertices 同一 geometry 实例只算一次 (0.195041ms)
+✔ countGeometryVertices 统计不同实例之和 (0.383125ms)
+✔ makeIslandGeometry 顶面法线朝 +Y，底部收窄不是平圆盘 (1.250708ms)
+✔ makeIslandGeometry 同一 seed 结果确定，不同 seed 有差异 (2.313041ms)
+✔ roofHeight 为 0 或极小时顶盖几何体仍全部 finite (0.340417ms)
+✔ makeWallSegment 六面封闭且位于局部原点 (0.105708ms)
+ℹ tests 45
+ℹ suites 0
+ℹ pass 45
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 16139.279834

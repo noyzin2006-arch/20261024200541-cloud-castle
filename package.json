@@ -1,0 +1,22 @@
+{
+  "name": "cloud-castle",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "云上城堡 —— 实时 Three.js 场景（浮岛城堡 / 体积云 / 黄金时刻）",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test:unit": "node --test tests/unit/*.test.js",
+    "test:browser": "npm run build && node --test tests/browser/*.test.js",
+    "test": "npm run build && node --test tests/unit/*.test.js tests/browser/*.test.js"
+  },
+  "dependencies": {
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "playwright": "1.64.1",
+    "vite": "8.3.5"
+  }
+}

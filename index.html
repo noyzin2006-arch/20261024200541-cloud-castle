@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark" />
+    <title>云上城堡 · Cloud Castle</title>
+    <meta name="description" content="漂浮在云层之上的实时 Three.js 城堡" />
+    <!-- 内联 data URI 图标：不产生任何额外网络请求，也不会触发 favicon 404 -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2312151f'/%3E%3Cpath d='M12 50V31h6v-6h5v6h6v-9h6v9h6v-6h5v6h6v19z' fill='%23e0b064'/%3E%3Cpath d='M27 18h10l-5-8z' fill='%23e0b064'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="stage"></canvas>
+
+      <header id="titlecard">
+        <h1>云上城堡</h1>
+        <p>浮岛 · 体积云 · 黄金时刻</p>
+      </header>
+
+      <div id="hud" aria-live="polite"></div>
+
+      <div id="hint">
+        <span><b>拖动</b> 环绕</span>
+        <span><b>滚轮</b> 推拉</span>
+        <span><b>R</b> 复位</span>
+        <span><b>P</b> 暂停</span>
+        <span><b>H</b> 隐藏面板</span>
+      </div>
+
+      <div id="boot">
+        <div class="boot-inner">
+          <div class="boot-mark"></div>
+          <div class="boot-title">云上城堡</div>
+          <div class="boot-sub">正在生成浮岛、体积云与光照…</div>
+        </div>
+      </div>
+
+      <div id="fatal" hidden>
+        <div class="fatal-inner">
+          <div class="fatal-title">无法启动</div>
+          <pre id="fatal-msg"></pre>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

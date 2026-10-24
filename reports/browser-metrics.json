@@ -1,0 +1,66 @@
+{
+  "sourceCommit": null,
+  "viewport": {
+    "width": 1920,
+    "height": 1080,
+    "dpr": 1
+  },
+  "seed": 20261024,
+  "quality": "high",
+  "warmupFrames": 120,
+  "sampleFrames": 60,
+  "maxDrawCalls": 46,
+  "maxTriangles": 20212,
+  "medianFps": 60,
+  "webgl2": true,
+  "towerCount": 8,
+  "towerHeights": [
+    26.5443,
+    26.2171,
+    23.2882,
+    26.2941,
+    19.5743,
+    19.3988,
+    25.2012,
+    24.5271
+  ],
+  "geometryVertexCount": 21974,
+  "lumaHistogram": {
+    "hero": {
+      "width": 1920,
+      "height": 1080,
+      "occupiedBins": 250,
+      "stddev": 41.11129872320766,
+      "midrangeRatio": 0.9544806134259259,
+      "roiStddev": 55.505789841648394,
+      "mean": 112.36711236557018
+    },
+    "side": {
+      "width": 1920,
+      "height": 1080,
+      "occupiedBins": 247,
+      "stddev": 32.17044513566826,
+      "midrangeRatio": 0.9786631944444445,
+      "roiStddev": 45.04457682485487,
+      "mean": 121.20345560922173
+    },
+    "responsive": {
+      "width": 1366,
+      "height": 768,
+      "occupiedBins": 248,
+      "stddev": 36.76328690554408,
+      "midrangeRatio": 0.9546949350292826,
+      "roiStddev": 49.470745273740675,
+      "mean": 106.11099802352749
+    }
+  },
+  "consoleErrors": [],
+  "pageErrors": [],
+  "externalRequests": [],
+  "failedRequests": [],
+  "screenshots": [
+    "reports/screenshots/hero-1920x1080.png",
+    "reports/screenshots/side-1920x1080.png",
+    "reports/screenshots/responsive-1366x768.png"
+  ]
+}

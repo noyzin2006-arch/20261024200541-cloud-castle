@@ -1,13 +1,27 @@
 {
-  "task": "",
+  "task": "CLOUDCASTLE-01",
   "round1": {
-    "brief": "",
-    "plan": "",
-    "guardedPaths": []
+    "brief": "handoff/briefs/CLOUDCASTLE-01.md",
+    "plan": "handoff/plans/CLOUDCASTLE-01.md",
+    "guardedPaths": [
+      "index.html",
+      "src/",
+      "public/",
+      "scripts/",
+      "vite.config.js",
+      "package.json"
+    ]
   },
   "round2": {
-    "delivery": "",
-    "advice": "",
-    "guardedPaths": []
+    "delivery": "handoff/delivered/CLOUDCASTLE-01.md",
+    "advice": "handoff/advice/CLOUDCASTLE-01.md",
+    "guardedPaths": [
+      "index.html",
+      "src/",
+      "public/",
+      "scripts/",
+      "vite.config.js",
+      "package.json"
+    ]
   }
 }
